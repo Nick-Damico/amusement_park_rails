@@ -2054,3 +2054,92 @@ Processing by UsersController#create as HTML
 Completed 201 Created in 152ms (Views: 60.8ms | ActiveRecord: 5.7ms)
 
 
+Started GET "/users/1" for 127.0.0.1 at 2018-11-25 15:09:39 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 360ms (Views: 327.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-11-25 15:09:42 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 58ms (Views: 51.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-11-25 15:09:44 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 84ms (Views: 77.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-11-25 15:09:48 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 89ms (Views: 82.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2018-11-25 15:09:52 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 80ms (Views: 71.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-11-25 15:09:55 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 76ms (Views: 68.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-25 15:10:02 -0500
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 170ms (Views: 158.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-11-25 15:10:09 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 90ms (Views: 82.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/6" for 127.0.0.1 at 2018-11-25 15:10:13 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 77ms (Views: 70.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-11-25 15:10:17 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 53ms (Views: 45.2ms | ActiveRecord: 0.6ms)
+
+
