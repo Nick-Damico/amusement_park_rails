@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       flash[:alert] = "Successfully Sign Up"
-      render :show, status: :created
+      redirect_to user_url(@user)
     else
       render :new, status: :bad_request
     end
@@ -33,6 +33,6 @@ class UsersController < ApplicationController
   end
 
   def get_user
-    @user = User.find_by(params[:user])
+    @user = User.find_by(id: params[:id])
   end
 end
