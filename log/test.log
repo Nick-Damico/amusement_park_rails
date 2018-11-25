@@ -12278,3 +12278,1061 @@ Started GET "/rack_session.raw" for 127.0.0.1 at 2018-11-25 15:17:30 -0500
 Started GET "/signin" for 127.0.0.1 at 2018-11-25 15:17:30 -0500
   [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
   [1m[35m (1.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (4.1ms)[0m  [1m[31mDELETE FROM "attractions";[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (1.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'attractions';[0m
+  [1m[35m (3.0ms)[0m  [1m[31mDELETE FROM "rides";[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'rides';[0m
+  [1m[35m (3.5ms)[0m  [1m[31mDELETE FROM "users";[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (5.6ms)[0m  [1m[31mDELETE FROM "ar_internal_metadata";[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ar_internal_metadata';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (8.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mindy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "nausea", "happiness", "tickets", "height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mindy"], ["password_digest", 0], ["nausea", 2], ["happiness", 3], ["tickets", 10], ["height", 50], ["created_at", "2018-11-25 20:32:41.380241"], ["updated_at", "2018-11-25 20:32:41.380241"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/signin" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (10.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mindy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "nausea", "happiness", "tickets", "height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mindy"], ["password_digest", 0], ["nausea", 2], ["happiness", 3], ["tickets", 10], ["height", 50], ["created_at", "2018-11-25 20:32:41.447532"], ["updated_at", "2018-11-25 20:32:41.447532"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/signin" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mindy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "nausea", "happiness", "tickets", "height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mindy"], ["password_digest", 0], ["nausea", 2], ["happiness", 3], ["tickets", 10], ["height", 50], ["created_at", "2018-11-25 20:32:41.465234"], ["updated_at", "2018-11-25 20:32:41.465234"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/1" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mindy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "nausea", "happiness", "tickets", "height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mindy"], ["password_digest", 0], ["nausea", 2], ["happiness", 3], ["tickets", 10], ["height", 50], ["created_at", "2018-11-25 20:32:41.496950"], ["updated_at", "2018-11-25 20:32:41.496950"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Walt Disney"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+Started GET "/signin" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mindy"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "nausea", "happiness", "tickets", "height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mindy"], ["password_digest", 0], ["nausea", 2], ["happiness", 3], ["tickets", 10], ["height", 50], ["created_at", "2018-11-25 20:32:41.563017"], ["updated_at", "2018-11-25 20:32:41.563017"]]
+  [1m[35m (0.9ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (4.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Walt Disney"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+Started GET "/signin" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (1.1ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:41.666928"], ["updated_at", "2018-11-25 20:32:41.666928"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ferris Wheel"], ["tickets", 2], ["nausea_rating", 2], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.670738"], ["updated_at", "2018-11-25 20:32:41.670738"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.9ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teacups"], ["tickets", 1], ["nausea_rating", 5], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.673330"], ["updated_at", "2018-11-25 20:32:41.673330"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.5ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:41.683006"], ["updated_at", "2018-11-25 20:32:41.683006"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ferris Wheel"], ["tickets", 2], ["nausea_rating", 2], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.685548"], ["updated_at", "2018-11-25 20:32:41.685548"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teacups"], ["tickets", 1], ["nausea_rating", 5], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.687302"], ["updated_at", "2018-11-25 20:32:41.687302"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.4ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:41.695835"], ["updated_at", "2018-11-25 20:32:41.695835"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.1ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ferris Wheel"], ["tickets", 2], ["nausea_rating", 2], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.697878"], ["updated_at", "2018-11-25 20:32:41.697878"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.1ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teacups"], ["tickets", 1], ["nausea_rating", 5], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.699819"], ["updated_at", "2018-11-25 20:32:41.699819"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (1.0ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:41.710239"], ["updated_at", "2018-11-25 20:32:41.710239"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ferris Wheel"], ["tickets", 2], ["nausea_rating", 2], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.716922"], ["updated_at", "2018-11-25 20:32:41.716922"]]
+  [1m[35m (0.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teacups"], ["tickets", 1], ["nausea_rating", 5], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.720406"], ["updated_at", "2018-11-25 20:32:41.720406"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.6ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:41.740237"], ["updated_at", "2018-11-25 20:32:41.740237"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ferris Wheel"], ["tickets", 2], ["nausea_rating", 2], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.743233"], ["updated_at", "2018-11-25 20:32:41.743233"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teacups"], ["tickets", 1], ["nausea_rating", 5], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.747301"], ["updated_at", "2018-11-25 20:32:41.747301"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.7ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:41.765241"], ["updated_at", "2018-11-25 20:32:41.765241"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ferris Wheel"], ["tickets", 2], ["nausea_rating", 2], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.768090"], ["updated_at", "2018-11-25 20:32:41.768090"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teacups"], ["tickets", 1], ["nausea_rating", 5], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.770135"], ["updated_at", "2018-11-25 20:32:41.770135"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (1.0ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:41.780406"], ["updated_at", "2018-11-25 20:32:41.780406"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ferris Wheel"], ["tickets", 2], ["nausea_rating", 2], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.785652"], ["updated_at", "2018-11-25 20:32:41.785652"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teacups"], ["tickets", 1], ["nausea_rating", 5], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.789364"], ["updated_at", "2018-11-25 20:32:41.789364"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.7ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:41.798779"], ["updated_at", "2018-11-25 20:32:41.798779"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ferris Wheel"], ["tickets", 2], ["nausea_rating", 2], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.801976"], ["updated_at", "2018-11-25 20:32:41.801976"]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teacups"], ["tickets", 1], ["nausea_rating", 5], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.806470"], ["updated_at", "2018-11-25 20:32:41.806470"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.4ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:41.816507"], ["updated_at", "2018-11-25 20:32:41.816507"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ferris Wheel"], ["tickets", 2], ["nausea_rating", 2], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.820657"], ["updated_at", "2018-11-25 20:32:41.820657"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.1ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teacups"], ["tickets", 1], ["nausea_rating", 5], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.822907"], ["updated_at", "2018-11-25 20:32:41.822907"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (2.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (2.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.7ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:41.838185"], ["updated_at", "2018-11-25 20:32:41.838185"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.4ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ferris Wheel"], ["tickets", 2], ["nausea_rating", 2], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.842272"], ["updated_at", "2018-11-25 20:32:41.842272"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.3ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teacups"], ["tickets", 1], ["nausea_rating", 5], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.846230"], ["updated_at", "2018-11-25 20:32:41.846230"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.7ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:41.856828"], ["updated_at", "2018-11-25 20:32:41.856828"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ferris Wheel"], ["tickets", 2], ["nausea_rating", 2], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.860808"], ["updated_at", "2018-11-25 20:32:41.860808"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.1ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teacups"], ["tickets", 1], ["nausea_rating", 5], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.863943"], ["updated_at", "2018-11-25 20:32:41.863943"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.6ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:41.878542"], ["updated_at", "2018-11-25 20:32:41.878542"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ferris Wheel"], ["tickets", 2], ["nausea_rating", 2], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.883447"], ["updated_at", "2018-11-25 20:32:41.883447"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.1ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teacups"], ["tickets", 1], ["nausea_rating", 5], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.885528"], ["updated_at", "2018-11-25 20:32:41.885528"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.5ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:41.895924"], ["updated_at", "2018-11-25 20:32:41.895924"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.3ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ferris Wheel"], ["tickets", 2], ["nausea_rating", 2], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.898329"], ["updated_at", "2018-11-25 20:32:41.898329"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.3ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teacups"], ["tickets", 1], ["nausea_rating", 5], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.902515"], ["updated_at", "2018-11-25 20:32:41.902515"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.4ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:41.915871"], ["updated_at", "2018-11-25 20:32:41.915871"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ferris Wheel"], ["tickets", 2], ["nausea_rating", 2], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.918402"], ["updated_at", "2018-11-25 20:32:41.918402"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.7ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teacups"], ["tickets", 1], ["nausea_rating", 5], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.920964"], ["updated_at", "2018-11-25 20:32:41.920964"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (1.9ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:41.936711"], ["updated_at", "2018-11-25 20:32:41.936711"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ferris Wheel"], ["tickets", 2], ["nausea_rating", 2], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.943581"], ["updated_at", "2018-11-25 20:32:41.943581"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.1ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teacups"], ["tickets", 1], ["nausea_rating", 5], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.945378"], ["updated_at", "2018-11-25 20:32:41.945378"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.5ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:41.960092"], ["updated_at", "2018-11-25 20:32:41.960092"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ferris Wheel"], ["tickets", 2], ["nausea_rating", 2], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.962500"], ["updated_at", "2018-11-25 20:32:41.962500"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.4ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teacups"], ["tickets", 1], ["nausea_rating", 5], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.964745"], ["updated_at", "2018-11-25 20:32:41.964745"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.4ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:41.975884"], ["updated_at", "2018-11-25 20:32:41.975884"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.1ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ferris Wheel"], ["tickets", 2], ["nausea_rating", 2], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.978024"], ["updated_at", "2018-11-25 20:32:41.978024"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teacups"], ["tickets", 1], ["nausea_rating", 5], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:41.979747"], ["updated_at", "2018-11-25 20:32:41.979747"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:41 -0500
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.6ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:42.011566"], ["updated_at", "2018-11-25 20:32:42.011566"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ferris Wheel"], ["tickets", 2], ["nausea_rating", 2], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:42.014757"], ["updated_at", "2018-11-25 20:32:42.014757"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teacups"], ["tickets", 1], ["nausea_rating", 5], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:42.018035"], ["updated_at", "2018-11-25 20:32:42.018035"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:42 -0500
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.7ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:42.032533"], ["updated_at", "2018-11-25 20:32:42.032533"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (4.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ferris Wheel"], ["tickets", 2], ["nausea_rating", 2], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:42.044337"], ["updated_at", "2018-11-25 20:32:42.044337"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teacups"], ["tickets", 1], ["nausea_rating", 5], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:42.047044"], ["updated_at", "2018-11-25 20:32:42.047044"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:42 -0500
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (2.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.7ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:42.062731"], ["updated_at", "2018-11-25 20:32:42.062731"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ferris Wheel"], ["tickets", 2], ["nausea_rating", 2], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:42.066504"], ["updated_at", "2018-11-25 20:32:42.066504"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teacups"], ["tickets", 1], ["nausea_rating", 5], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:42.068966"], ["updated_at", "2018-11-25 20:32:42.068966"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:42 -0500
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.6ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:42.092757"], ["updated_at", "2018-11-25 20:32:42.092757"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ferris Wheel"], ["tickets", 2], ["nausea_rating", 2], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:42.116411"], ["updated_at", "2018-11-25 20:32:42.116411"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (4.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teacups"], ["tickets", 1], ["nausea_rating", 5], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:42.127127"], ["updated_at", "2018-11-25 20:32:42.127127"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:42 -0500
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.6ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:42.143895"], ["updated_at", "2018-11-25 20:32:42.143895"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.3ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ferris Wheel"], ["tickets", 2], ["nausea_rating", 2], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:42.147192"], ["updated_at", "2018-11-25 20:32:42.147192"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teacups"], ["tickets", 1], ["nausea_rating", 5], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:42.151383"], ["updated_at", "2018-11-25 20:32:42.151383"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:42 -0500
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.5ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:42.165917"], ["updated_at", "2018-11-25 20:32:42.165917"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.1ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ferris Wheel"], ["tickets", 2], ["nausea_rating", 2], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:42.168397"], ["updated_at", "2018-11-25 20:32:42.168397"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.1ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teacups"], ["tickets", 1], ["nausea_rating", 5], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:42.170066"], ["updated_at", "2018-11-25 20:32:42.170066"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:42 -0500
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.7ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:42.183482"], ["updated_at", "2018-11-25 20:32:42.183482"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (1.0ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ferris Wheel"], ["tickets", 2], ["nausea_rating", 2], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:42.186840"], ["updated_at", "2018-11-25 20:32:42.186840"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teacups"], ["tickets", 1], ["nausea_rating", 5], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:42.197757"], ["updated_at", "2018-11-25 20:32:42.197757"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:42 -0500
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.6ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:42.216854"], ["updated_at", "2018-11-25 20:32:42.216854"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.3ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ferris Wheel"], ["tickets", 2], ["nausea_rating", 2], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:42.220475"], ["updated_at", "2018-11-25 20:32:42.220475"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.3ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teacups"], ["tickets", 1], ["nausea_rating", 5], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:42.224745"], ["updated_at", "2018-11-25 20:32:42.224745"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:42 -0500
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.8ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:42.240998"], ["updated_at", "2018-11-25 20:32:42.240998"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ferris Wheel"], ["tickets", 2], ["nausea_rating", 2], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:42.244175"], ["updated_at", "2018-11-25 20:32:42.244175"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.1ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teacups"], ["tickets", 1], ["nausea_rating", 5], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:42.246313"], ["updated_at", "2018-11-25 20:32:42.246313"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:42 -0500
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (2.9ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:42.255291"], ["updated_at", "2018-11-25 20:32:42.255291"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ferris Wheel"], ["tickets", 2], ["nausea_rating", 2], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:42.265904"], ["updated_at", "2018-11-25 20:32:42.265904"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.6ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teacups"], ["tickets", 1], ["nausea_rating", 5], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:42.269751"], ["updated_at", "2018-11-25 20:32:42.269751"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:42 -0500
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (2.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.4ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:42.285444"], ["updated_at", "2018-11-25 20:32:42.285444"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Max Charles"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.4ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:42.302661"], ["updated_at", "2018-11-25 20:32:42.302661"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Load (0.2ms)[0m  [1m[34mSELECT  "attractions".* FROM "attractions" WHERE "attractions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT  "rides".* FROM "rides" WHERE "rides"."attraction_id" = ? ORDER BY "rides"."id" ASC LIMIT ?[0m  [["attraction_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Max Charles"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Skai Jackson"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.5ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:42.432161"], ["updated_at", "2018-11-25 20:32:42.432161"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Max Charles"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mindy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "nausea", "happiness", "tickets", "height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mindy"], ["password_digest", 0], ["nausea", 5], ["happiness", 3], ["tickets", 4], ["height", 34], ["created_at", "2018-11-25 20:32:42.465142"], ["updated_at", "2018-11-25 20:32:42.465142"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.4ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:42.467404"], ["updated_at", "2018-11-25 20:32:42.467404"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Load (0.1ms)[0m  [1m[34mSELECT  "attractions".* FROM "attractions" WHERE "attractions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRide Create (0.4ms)[0m  [1m[32mINSERT INTO "rides" ("attraction_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["attraction_id", 1], ["user_id", 1], ["created_at", "2018-11-25 20:32:42.474263"], ["updated_at", "2018-11-25 20:32:42.474263"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mindy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "nausea", "happiness", "tickets", "height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mindy"], ["password_digest", 0], ["nausea", 5], ["happiness", 3], ["tickets", 4], ["height", 34], ["created_at", "2018-11-25 20:32:42.484666"], ["updated_at", "2018-11-25 20:32:42.484666"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.3ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:42.487230"], ["updated_at", "2018-11-25 20:32:42.487230"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Load (0.1ms)[0m  [1m[34mSELECT  "attractions".* FROM "attractions" WHERE "attractions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRide Create (0.3ms)[0m  [1m[32mINSERT INTO "rides" ("attraction_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["attraction_id", 1], ["user_id", 1], ["created_at", "2018-11-25 20:32:42.492519"], ["updated_at", "2018-11-25 20:32:42.492519"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mindy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "nausea", "happiness", "tickets", "height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mindy"], ["password_digest", 0], ["nausea", 5], ["happiness", 3], ["tickets", 4], ["height", 34], ["created_at", "2018-11-25 20:32:42.506209"], ["updated_at", "2018-11-25 20:32:42.506209"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.3ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:42.509783"], ["updated_at", "2018-11-25 20:32:42.509783"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Load (0.1ms)[0m  [1m[34mSELECT  "attractions".* FROM "attractions" WHERE "attractions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRide Create (0.4ms)[0m  [1m[32mINSERT INTO "rides" ("attraction_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["attraction_id", 1], ["user_id", 1], ["created_at", "2018-11-25 20:32:42.513552"], ["updated_at", "2018-11-25 20:32:42.513552"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mindy"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "nausea", "happiness", "tickets", "height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mindy"], ["password_digest", 0], ["nausea", 5], ["happiness", 3], ["tickets", 4], ["height", 34], ["created_at", "2018-11-25 20:32:42.525698"], ["updated_at", "2018-11-25 20:32:42.525698"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.3ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:42.530114"], ["updated_at", "2018-11-25 20:32:42.530114"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Load (0.1ms)[0m  [1m[34mSELECT  "attractions".* FROM "attractions" WHERE "attractions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRide Create (0.4ms)[0m  [1m[32mINSERT INTO "rides" ("attraction_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["attraction_id", 1], ["user_id", 1], ["created_at", "2018-11-25 20:32:42.542050"], ["updated_at", "2018-11-25 20:32:42.542050"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mindy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "nausea", "happiness", "tickets", "height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mindy"], ["password_digest", 0], ["nausea", 5], ["happiness", 3], ["tickets", 4], ["height", 34], ["created_at", "2018-11-25 20:32:42.559065"], ["updated_at", "2018-11-25 20:32:42.559065"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "Mindy"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.1ms)[0m  [1m[33mUPDATE "users" SET "tickets" = ?, "height" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tickets", 10], ["height", 30], ["updated_at", "2018-11-25 20:32:42.574582"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.3ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:42.577386"], ["updated_at", "2018-11-25 20:32:42.577386"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Load (0.1ms)[0m  [1m[34mSELECT  "attractions".* FROM "attractions" WHERE "attractions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRide Create (1.3ms)[0m  [1m[32mINSERT INTO "rides" ("attraction_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["attraction_id", 1], ["user_id", 1], ["created_at", "2018-11-25 20:32:42.582677"], ["updated_at", "2018-11-25 20:32:42.582677"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mindy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "nausea", "happiness", "tickets", "height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mindy"], ["password_digest", 0], ["nausea", 5], ["happiness", 3], ["tickets", 4], ["height", 34], ["created_at", "2018-11-25 20:32:42.597389"], ["updated_at", "2018-11-25 20:32:42.597389"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "Mindy"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "height" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["height", 30], ["updated_at", "2018-11-25 20:32:42.602283"], ["id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:42.605651"], ["updated_at", "2018-11-25 20:32:42.605651"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Load (0.1ms)[0m  [1m[34mSELECT  "attractions".* FROM "attractions" WHERE "attractions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRide Create (0.4ms)[0m  [1m[32mINSERT INTO "rides" ("attraction_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["attraction_id", 1], ["user_id", 1], ["created_at", "2018-11-25 20:32:42.609940"], ["updated_at", "2018-11-25 20:32:42.609940"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mindy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "nausea", "happiness", "tickets", "height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mindy"], ["password_digest", 0], ["nausea", 5], ["happiness", 3], ["tickets", 4], ["height", 34], ["created_at", "2018-11-25 20:32:42.620860"], ["updated_at", "2018-11-25 20:32:42.620860"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "Mindy"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.1ms)[0m  [1m[33mUPDATE "users" SET "tickets" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tickets", 10], ["updated_at", "2018-11-25 20:32:42.625865"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.3ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:42.628225"], ["updated_at", "2018-11-25 20:32:42.628225"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Load (0.2ms)[0m  [1m[34mSELECT  "attractions".* FROM "attractions" WHERE "attractions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRide Create (0.4ms)[0m  [1m[32mINSERT INTO "rides" ("attraction_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["attraction_id", 1], ["user_id", 1], ["created_at", "2018-11-25 20:32:42.633753"], ["updated_at", "2018-11-25 20:32:42.633753"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "Mindy"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tickets" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tickets", 5], ["updated_at", "2018-11-25 20:32:42.638996"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "Mindy"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "Mindy"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mindy"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mindy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "nausea", "happiness", "tickets", "height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mindy"], ["password_digest", 0], ["nausea", 5], ["happiness", 3], ["tickets", 4], ["height", 34], ["created_at", "2018-11-25 20:32:42.672058"], ["updated_at", "2018-11-25 20:32:42.672058"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "Mindy"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tickets" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tickets", 10], ["updated_at", "2018-11-25 20:32:42.681927"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.3ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:42.684980"], ["updated_at", "2018-11-25 20:32:42.684980"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Load (0.1ms)[0m  [1m[34mSELECT  "attractions".* FROM "attractions" WHERE "attractions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRide Create (0.3ms)[0m  [1m[32mINSERT INTO "rides" ("attraction_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["attraction_id", 1], ["user_id", 1], ["created_at", "2018-11-25 20:32:42.692667"], ["updated_at", "2018-11-25 20:32:42.692667"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "Mindy"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tickets" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tickets", 5], ["updated_at", "2018-11-25 20:32:42.697595"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "Mindy"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "Mindy"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mindy"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mindy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "nausea", "happiness", "tickets", "height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mindy"], ["password_digest", 0], ["nausea", 5], ["happiness", 3], ["tickets", 4], ["height", 34], ["created_at", "2018-11-25 20:32:42.713144"], ["updated_at", "2018-11-25 20:32:42.713144"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "Mindy"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tickets" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tickets", 10], ["updated_at", "2018-11-25 20:32:42.718179"], ["id", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.3ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:42.723481"], ["updated_at", "2018-11-25 20:32:42.723481"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Load (0.1ms)[0m  [1m[34mSELECT  "attractions".* FROM "attractions" WHERE "attractions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRide Create (0.5ms)[0m  [1m[32mINSERT INTO "rides" ("attraction_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["attraction_id", 1], ["user_id", 1], ["created_at", "2018-11-25 20:32:42.728490"], ["updated_at", "2018-11-25 20:32:42.728490"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "Mindy"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tickets" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tickets", 5], ["updated_at", "2018-11-25 20:32:42.735415"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "Mindy"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (2.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "Mindy"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mindy"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (2.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mindy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "nausea", "happiness", "tickets", "height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mindy"], ["password_digest", 0], ["nausea", 5], ["happiness", 3], ["tickets", 4], ["height", 34], ["created_at", "2018-11-25 20:32:42.765456"], ["updated_at", "2018-11-25 20:32:42.765456"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "Mindy"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Name"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Walt"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "nausea", "happiness", "tickets", "height", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Walt"], ["password_digest", 0], ["nausea", 5], ["happiness", 3], ["tickets", 4], ["height", 34], ["admin", 1], ["created_at", "2018-11-25 20:32:42.791843"], ["updated_at", "2018-11-25 20:32:42.791843"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "Walt"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mindy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "nausea", "happiness", "tickets", "height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mindy"], ["password_digest", 0], ["nausea", 5], ["happiness", 3], ["tickets", 4], ["height", 34], ["created_at", "2018-11-25 20:32:42.808427"], ["updated_at", "2018-11-25 20:32:42.808427"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mindy"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "nausea", "happiness", "tickets", "height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mindy"], ["password_digest", 0], ["nausea", 5], ["happiness", 3], ["tickets", 4], ["height", 34], ["created_at", "2018-11-25 20:32:42.818031"], ["updated_at", "2018-11-25 20:32:42.818031"]]
+  [1m[35m (0.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:42.825975"], ["updated_at", "2018-11-25 20:32:42.825975"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Load (0.1ms)[0m  [1m[34mSELECT  "attractions".* FROM "attractions" WHERE "attractions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRide Create (0.4ms)[0m  [1m[32mINSERT INTO "rides" ("attraction_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["attraction_id", 1], ["user_id", 1], ["created_at", "2018-11-25 20:32:42.830760"], ["updated_at", "2018-11-25 20:32:42.830760"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.1ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ferris Wheel"], ["tickets", 2], ["nausea_rating", 2], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:42.833255"], ["updated_at", "2018-11-25 20:32:42.833255"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Load (0.2ms)[0m  [1m[34mSELECT  "attractions".* FROM "attractions" WHERE "attractions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRide Create (2.9ms)[0m  [1m[32mINSERT INTO "rides" ("attraction_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["attraction_id", 2], ["user_id", 1], ["created_at", "2018-11-25 20:32:42.842872"], ["updated_at", "2018-11-25 20:32:42.842872"]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mRide Load (1.7ms)[0m  [1m[34mSELECT  "rides".* FROM "rides" WHERE "rides"."user_id" = ? ORDER BY "rides"."id" ASC LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT  "rides".* FROM "rides" WHERE "rides"."user_id" = ? ORDER BY "rides"."id" DESC LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mindy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "nausea", "happiness", "tickets", "height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mindy"], ["password_digest", 0], ["nausea", 5], ["happiness", 3], ["tickets", 4], ["height", 34], ["created_at", "2018-11-25 20:32:42.869065"], ["updated_at", "2018-11-25 20:32:42.869065"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.3ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Roller Coaster"], ["tickets", 5], ["nausea_rating", 2], ["happiness_rating", 4], ["min_height", 32], ["created_at", "2018-11-25 20:32:42.876067"], ["updated_at", "2018-11-25 20:32:42.876067"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mAttraction Create (0.2ms)[0m  [1m[32mINSERT INTO "attractions" ("name", "tickets", "nausea_rating", "happiness_rating", "min_height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ferris Wheel"], ["tickets", 2], ["nausea_rating", 2], ["happiness_rating", 1], ["min_height", 28], ["created_at", "2018-11-25 20:32:42.893660"], ["updated_at", "2018-11-25 20:32:42.893660"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mRide Create (0.5ms)[0m  [1m[32mINSERT INTO "rides" ("attraction_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["attraction_id", 1], ["user_id", 1], ["created_at", "2018-11-25 20:32:42.896790"], ["updated_at", "2018-11-25 20:32:42.896790"]]
+  [1m[36mRide Create (0.1ms)[0m  [1m[32mINSERT INTO "rides" ("attraction_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["attraction_id", 2], ["user_id", 1], ["created_at", "2018-11-25 20:32:42.900464"], ["updated_at", "2018-11-25 20:32:42.900464"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mAttraction Load (0.3ms)[0m  [1m[34mSELECT  "attractions".* FROM "attractions" INNER JOIN "rides" ON "attractions"."id" = "rides"."attraction_id" WHERE "rides"."user_id" = ? ORDER BY "attractions"."id" ASC LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mAttraction Load (0.2ms)[0m  [1m[34mSELECT  "attractions".* FROM "attractions" INNER JOIN "rides" ON "attractions"."id" = "rides"."attraction_id" WHERE "rides"."user_id" = ? ORDER BY "attractions"."id" DESC LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mindy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "nausea", "happiness", "tickets", "height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mindy"], ["password_digest", 0], ["nausea", 5], ["happiness", 3], ["tickets", 4], ["height", 34], ["created_at", "2018-11-25 20:32:42.922828"], ["updated_at", "2018-11-25 20:32:42.922828"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mindy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "nausea", "happiness", "tickets", "height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mindy"], ["password_digest", 0], ["nausea", 5], ["happiness", 3], ["tickets", 4], ["height", 34], ["created_at", "2018-11-25 20:32:42.935392"], ["updated_at", "2018-11-25 20:32:42.935392"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "Mindy"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (2.1ms)[0m  [1m[31mDELETE FROM "attractions";[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'attractions';[0m
+  [1m[35m (2.2ms)[0m  [1m[31mDELETE FROM "rides";[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'rides';[0m
+  [1m[35m (2.2ms)[0m  [1m[31mDELETE FROM "users";[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (2.2ms)[0m  [1m[31mDELETE FROM "ar_internal_metadata";[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ar_internal_metadata';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:32:55 -0500
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (2.2ms)[0m  [1m[31mDELETE FROM "attractions";[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'attractions';[0m
+  [1m[35m (4.2ms)[0m  [1m[31mDELETE FROM "rides";[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'rides';[0m
+  [1m[35m (2.1ms)[0m  [1m[31mDELETE FROM "users";[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (2.0ms)[0m  [1m[31mDELETE FROM "ar_internal_metadata";[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ar_internal_metadata';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:33:20 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_errors.html.erb (0.8ms)
+  Rendered users/_form.html.erb (34.1ms)
+  Rendered users/new.html.erb within layouts/application (41.3ms)
+Completed 200 OK in 439ms (Views: 416.1ms | ActiveRecord: 0.9ms)
+Started POST "/users" for 127.0.0.1 at 2018-11-25 15:33:20 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"Amy Poehler", "height"=>"58", "happiness"=>"3", "nausea"=>"2", "tickets"=>"15", "admin"=>"0", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.6ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amy Poehler"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "nausea", "happiness", "tickets", "height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Amy Poehler"], ["password_digest", 0], ["nausea", 2], ["happiness", 3], ["tickets", 15], ["height", 58], ["created_at", "2018-11-25 20:33:20.519522"], ["updated_at", "2018-11-25 20:33:20.519522"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 27ms (ActiveRecord: 1.5ms)
+Started GET "/users/1" for 127.0.0.1 at 2018-11-25 15:33:20 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 17ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-11-25 15:33:20 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_errors.html.erb (0.1ms)
+  Rendered users/_form.html.erb (6.5ms)
+  Rendered users/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2018-11-25 15:33:20 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"Amy Poehler", "height"=>"58", "happiness"=>"3", "nausea"=>"2", "tickets"=>"15", "admin"=>"0", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amy Poehler"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "nausea", "happiness", "tickets", "height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Amy Poehler"], ["password_digest", 0], ["nausea", 2], ["happiness", 3], ["tickets", 15], ["height", 58], ["created_at", "2018-11-25 20:33:20.629902"], ["updated_at", "2018-11-25 20:33:20.629902"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 12ms (ActiveRecord: 1.6ms)
+Started GET "/users/1" for 127.0.0.1 at 2018-11-25 15:33:20 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.2ms)
+Started GET "/rack_session.raw" for 127.0.0.1 at 2018-11-25 15:33:20 -0500
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mindy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "nausea", "happiness", "tickets", "height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mindy"], ["password_digest", 0], ["nausea", 2], ["happiness", 3], ["tickets", 10], ["height", 50], ["created_at", "2018-11-25 20:33:20.660820"], ["updated_at", "2018-11-25 20:33:20.660820"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/signin" for 127.0.0.1 at 2018-11-25 15:33:20 -0500
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.3ms)[0m  [1m[31mrollback transaction[0m
