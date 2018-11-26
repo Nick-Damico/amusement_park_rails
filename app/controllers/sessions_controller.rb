@@ -10,8 +10,11 @@ class SessionsController < ApplicationController
     respond_to do |format|
       if user && user.authenticate(params[:user][:password])
         # login
-        session[:user_id] = user.id
-        format.html {}
+        log_in(user)
+        format.html {
+          flash[:success] = 'Successfully logged in'
+          redirect_to user
+        }
         format.json {}
       else
         # error code
