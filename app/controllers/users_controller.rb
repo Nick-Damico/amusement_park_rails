@@ -10,7 +10,10 @@ class UsersController < ApplicationController
       if @user
         format.html { render :show, status: :ok }
       else
-        format.html { redirect_to root_url, alert: "User '#{params[:id]}' Not Found" }
+        format.html {
+          flash[:danger] =  "User '#{params[:id]}' Not Found"
+          redirect_to root_url
+        }
       end
     end
   end
@@ -20,7 +23,10 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         session[:user_id] = @user.id
-        format.html { redirect_to @user, alert: 'Successfully Signed Up' }
+        format.html {
+          flash[:success] = 'Successfully Signed Up'
+          redirect_to @user
+        }
         format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render :new }
