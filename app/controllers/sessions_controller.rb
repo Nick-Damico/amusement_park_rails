@@ -28,6 +28,19 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    respond_to do |format|
+      if logged_in?
+        format.html {
+          log_out()
+          flash.now[:success] = "Successfully Logged Out"
+          redirect_to root_url
+          }
+        format.json {}
+      else
+        format.html {}
+        format.json {}
+      end
+    end
   end
 
   private
