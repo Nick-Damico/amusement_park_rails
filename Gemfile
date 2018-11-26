@@ -23,6 +23,7 @@ gem 'uglifier', '>= 1.3.0'
 # bootstrap
 
 gem 'bootstrap-sass', '3.3.7'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
