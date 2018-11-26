@@ -6,6 +6,13 @@ class UsersController < ApplicationController
   end
 
   def show
+    respond_to do |format|
+      if @user
+        format.html { render :show, status: :ok }
+      else
+        format.html { redirect_to root_url, alert: "User '#{params[:id]}' Not Found" }
+      end
+    end
   end
 
   def create
