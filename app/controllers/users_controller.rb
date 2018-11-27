@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :get_user, only: [:show]
-  before_action :logged_in?, only: [:show]
+  before_action :logged_in, only: [:show]
 
   def new
     @user = User.new
