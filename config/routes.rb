@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'new/destroy'
   root 'static#home'
   resources :users
-  resources :attractions, only: [:index]
+  resources :attractions, only: [:index, :show]
 
   get     '/signup',  to: 'users#new'
   get     '/signin',  to: 'sessions#new'
