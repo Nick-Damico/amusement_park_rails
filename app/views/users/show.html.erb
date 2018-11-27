@@ -1,12 +1,14 @@
 <div class="jumbotron">
   <h1>Welcome to the Flatiron Amusement Park</h1>
-  <h2><%= @user.name %></h2>
+  <h2><%= @user.name %> <%= '(ADMIN)' if @user.admin %></h2>
   <ul class="list-group">
-    <li class="list-group-item">height: <%= @user.height %> inches</li>
-    <li class="list-group-item">Mood: <%= @user.mood %></li>
-    <li class="list-group-item">Nausea Level: <%= @user.nausea %></li>
-    <li class="list-group-item">Tickets: <%= @user.tickets %></li>
-    <li class="list-group-item">Park Owner: <%= @user.admin ? 'Yes' : 'No' %></li>
+    <% unless @user.admin %>
+      <li class="list-group-item">height: <%= @user.height %> inches</li>
+      <li class="list-group-item">Mood: <%= @user.mood %></li>
+      <li class="list-group-item">Nausea Level: <%= @user.nausea %></li>
+      <li class="list-group-item">Tickets: <%= @user.tickets %></li>
+      <li class="list-group-item">Park Owner: <%= @user.admin ? 'Yes' : 'No' %></li>
+    <% end %>
   </ul>
   <p><a class="btn btn-primary btn-lg" href="#" role="button">View Attractions</a></p>
 </div>
