@@ -1,0 +1,30 @@
+<div class="row">
+    <% @attractions.each do |attraction| %>
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img src="https://dummyimage.com/240x200/29db94/000000.png&text=Ride" alt="amusement park ride">
+          <div class="caption">
+            <h3><%= attraction.name %></h3>
+            <div class="list-group">
+              <ul class="list-group__list">
+                <h5 class="list-group-item active">
+                  Ride Info:
+                </h5>
+                <li class="list-group-item">Ticket Price: <%= attraction.tickets %></li>
+                <li class="list-group-item">Nausea Rating: <%= attraction.nausea_rating %></li>
+                <li class="list-group-item">Happiness Rating: <%= attraction.happiness_rating %></li>
+                <li class="list-group-item list-group-item-danger">You must be <%= attraction.min_height %> inches tall to ride this attraction.</li>
+              </ul>
+            </div>
+            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+</div>
+
+<!-- :name => "Teacups",
+:tickets => 1,
+:nausea_rating => 5,
+:happiness_rating => 1,
+:min_height => 28 -->
