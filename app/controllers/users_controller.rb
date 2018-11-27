@@ -11,7 +11,7 @@ class UsersController < ApplicationController
         format.html { render :show, status: :ok }
       else
         format.html {
-          flash[:danger] =  "User '#{params[:id]}' Not Found"
+          flash[:error] =  "User '#{params[:id]}' Not Found"
           redirect_to root_url
         }
       end

@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
       else
         # error code
         format.html {
-          flash.now[:danger] = "Invalid Name/Password match"
+          flash.now[:error] = "Invalid Name/Password match"
           render :new
         }
         format.json {}
