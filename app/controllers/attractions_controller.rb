@@ -22,6 +22,13 @@ class AttractionsController < ApplicationController
   end
 
   def ride
-    raise params.inspect
+    attraction = Attraction.find_by(id: params[:id])
+    attraction.take_ride(current_user)
+    respond_to do |format|
+      format.html {
+        flash[:success] = "Thanks for riding the #{attraction.name}!"
+        redirect_to current_user
+      }
+    end
   end
 end

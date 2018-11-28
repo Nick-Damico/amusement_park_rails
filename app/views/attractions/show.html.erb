@@ -11,7 +11,7 @@
     </ul>
     <p>
       <%= form_tag ride_path, method: "POST" do %>
-        <%= hidden_field_tag @attraction.id %>
+        <%= hidden_field_tag :id, @attraction.id %>
         <button class="btn btn-success">Go on this ride</button>
       <% end %>
     </p>
