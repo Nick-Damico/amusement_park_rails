@@ -1,7 +1,7 @@
 <% if is_admin? %>
 <div class="row">
   <div class="col-sm-2">
-    <p><%= button_to "New Attraction", new_attraction_path, method: 'get', class: 'btn btn-primary btn-lg' %></p>
+    <p><%= link_to "New Attraction", new_attraction_path, class: 'btn btn-primary btn-lg' %></p>
   </div>
 </div>
 <% end %>
@@ -23,7 +23,11 @@
                 <li class="list-group-item list-group-item-danger">You must be <%= attraction.min_height %> inches tall to ride this attraction.</li>
               </ul>
             </div>
-            <p><a href="<%= attraction_path(attraction) %>" class="btn btn-success" role="button">Go on <%= attraction.name %></a></p>
+            <% if is_admin? %>
+              <%= link_to "Show #{attraction.name}", attraction, class: 'btn btn-primary' %>
+            <% else %>
+              <p><a href="<%= attraction_path(attraction) %>" class="btn btn-success" role="button">Go on <%= attraction.name %></a></p>
+            <% end %>
           </div>
         </div>
       </div>

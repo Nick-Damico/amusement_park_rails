@@ -1,6 +1,17 @@
 class Attraction < ApplicationRecord
+  # Validations
   has_many :rides
   has_many :users, through: :rides
+  # Validations
+  validates :name, presence: true, uniqueness: true
+  validates :min_height, presence: true, numericality: { only_integer: false }
+  validates :happiness_rating, presence: true, numericality: { only_integer: true,
+                                                        greater_than: 0,
+                                                        less_than: 6 }
+  validates :nausea_rating, presence: true, numericality: { only_integer: true,
+                                                     greater_than: 0,
+                                                     less_than: 6 }
+  validates :tickets, presence: true, numericality: { only_integer: true }
 
   def take_ride(user)
     user.update_attributes(

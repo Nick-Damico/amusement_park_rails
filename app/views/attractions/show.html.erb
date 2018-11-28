@@ -10,9 +10,13 @@
       <li class="list-group-item list-group-item-danger">You must be <%= @attraction.min_height %> inches tall to ride this attraction.</li>
     </ul>
     <p>
-      <%= form_tag ride_path, method: "POST" do %>
+      <% if is_admin? %>
+        <p><%= link_to "Back to Attractions", attractions_path, class: 'btn btn-primary btn-lg' %> <%= link_to "Edit Attraction", edit_attraction_path, class: 'btn btn-warning btn-lg' %></p>
+      <% else %>
+        <%= form_tag ride_path, method: "POST" do %>
         <%= hidden_field_tag :id, @attraction.id %>
         <button class="btn btn-success">Go on this ride</button>
+        <% end %>
       <% end %>
     </p>
 </div>

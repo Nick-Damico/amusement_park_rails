@@ -2,9 +2,25 @@ class AttractionsController < ApplicationController
   def index
     @attractions = Attraction.all
   end
-  
+
   def new
     @attraction = Attraction.new
+  end
+
+  def create
+    @attraction = Attraction.new(attraction_params)
+    respond_to do |format|
+      if @attraction.save
+        format.html {
+          flash[:success] = "Attraction #{@attraction.name} created."
+          redirect_to @attraction
+        }
+      else
+        format.html {
+          render :new
+        }
+      end
+    end
   end
 
   def show
@@ -43,5 +59,11 @@ class AttractionsController < ApplicationController
       end
     end
   end
+
+  private
+    def attraction_params
+      params.require(:attraction).permit(:name, :happiness_rating, :min_height,
+                                         :nausea_rating, :tickets)
+    end
 
 end
