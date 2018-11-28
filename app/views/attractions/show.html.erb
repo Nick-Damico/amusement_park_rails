@@ -1,0 +1,18 @@
+<div class="jumbotron">
+  <h1><%= @attraction.name %></h1>
+    <ul class="list-group__list">
+      <h5 class="list-group-item active">
+        Ride Info:
+      </h5>
+      <li class="list-group-item">Ticket Price: <%= @attraction.tickets %></li>
+      <li class="list-group-item">Nausea Rating: <%= @attraction.nausea_rating %></li>
+      <li class="list-group-item">Happiness Rating: <%= @attraction.happiness_rating %></li>
+      <li class="list-group-item list-group-item-danger">You must be <%= @attraction.min_height %> inches tall to ride this attraction.</li>
+    </ul>
+    <p>
+      <%= form_tag ride_path, method: "POST" do %>
+        <%= hidden_field_tag @attraction.id %>
+        <button class="btn btn-success">Go on this ride</button>
+      <% end %>
+    </p>
+</div>
