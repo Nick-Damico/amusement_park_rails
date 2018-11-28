@@ -14,6 +14,7 @@ class Attraction < ApplicationRecord
     msg = []
     if user.height < self.min_height
       msg << "You are not tall enough to ride the #{self.name}"
+    end
     if user.tickets < self.tickets
       msg << "You do not have enough tickets to ride the #{self.name}"
     end
