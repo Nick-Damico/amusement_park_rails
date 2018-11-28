@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'new/destroy'
   root 'static#home'
   resources :users
-  resources :attractions, only: [:index, :show]
+  resources :attractions, only: [:index, :show, :new, :create]
   post    '/ride',    to: 'attractions#ride'
 
   get     '/signup',  to: 'users#new'
