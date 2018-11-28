@@ -1,6 +1,11 @@
 <div class="jumbotron">
   <h1>Welcome to, Flatiron Amusement Park</h1>
   <h2>Powered by Rails</h2>
-  <p>Sign Up to enjoy the rides</p>
-  <p><a class="btn btn-success btn-lg" href="<%= signup_url %>" role="button">Sign Up</a></p>
+  <% if logged_in? %>
+    <p>Click the link below to View Rides</p>
+    <p><a class="btn btn-success btn-lg" href="<%= attractions_url %>" role="button">View attractions</a></p>
+  <% else %>
+    <p>Sign Up to enjoy the rides</p>
+    <p><a class="btn btn-success btn-lg" href="<%= signup_url %>" role="button">Sign Up</a></p>
+  <% end %>
 </div>
