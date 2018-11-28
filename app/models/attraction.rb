@@ -9,4 +9,14 @@ class Attraction < ApplicationRecord
       happiness: user.happiness += happiness_rating,
     )
   end
+
+  def can_user_ride(user)
+    msg = []
+    if user.height < self.min_height
+      msg << "You are not tall enough to ride the #{self.name}"
+    if user.tickets < self.tickets
+      msg << "You do not have enough tickets to ride the #{self.name}"
+    end
+    msg
+  end
 end

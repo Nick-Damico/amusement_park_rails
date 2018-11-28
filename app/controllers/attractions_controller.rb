@@ -23,12 +23,20 @@ class AttractionsController < ApplicationController
 
   def ride
     attraction = Attraction.find_by(id: params[:id])
-    attraction.take_ride(current_user)
+    msg = attraction.can_user_ride(current_user)
     respond_to do |format|
-      format.html {
-        flash[:success] = "Thanks for riding the #{attraction.name}!"
-        redirect_to current_user
-      }
+      if msg.any?
+        format.html {
+          flash[:error] = msg.join(' ')
+          redirect_to current_user
+        }
+      else
+        attraction.take_ride(current_user)
+        format.html {
+          flash[:success] = "Thanks for riding the #{attraction.name}!"
+          redirect_to current_user
+        }
+      end
     end
   end
 end
