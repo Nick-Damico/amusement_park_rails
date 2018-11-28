@@ -216,6 +216,24 @@ describe 'Feature Test: Go on a Ride', :type => :feature do
     expect(page).to have_button("Go on this ride")
   end
 
+  it "redirects to attractions index page on accessing atttractions/:id that doesn't exist" do
+    attractions_length = Attraction.all.length
+    id_does_not_exist = attractions_length + 1
+    visit "/attractions/#{id_does_not_exist}"
+    expect(current_path).to eq("/attractions")
+  end
+
+  it "displays an error message when visiting an attractions/:id that doesn't exist" do
+    attractions_length = Attraction.all.length
+    id_does_not_exist = attractions_length + 1
+    visit "/attractions/#{id_does_not_exist}"
+    expect(current_path).to eq("/attractions")
+    expect(page).to have_content("Ride #{id_does_not_exist} doesn't exist")
+    # Tests that the message dissappears on a new request
+    visit '/attractions'
+    expect(page).to_not have_content("Ride #{id_does_not_exist} doesn't exist")
+  end
+
   it "clicking on 'Go on ride' redirects to user show page" do
     click_link('See attractions')
     click_link("Go on #{@ferriswheel.name}")
