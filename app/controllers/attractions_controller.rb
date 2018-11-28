@@ -7,6 +7,24 @@ class AttractionsController < ApplicationController
     @attraction = Attraction.new
   end
 
+  def show
+    @attraction = Attraction.find_by(id: params[:id])
+    respond_to do |format|
+      if @attraction
+        format.html {
+          render :show
+        }
+        format.json {}
+      else
+        format.html {
+          flash[:error] = "Ride #{params[:id]} doesn't exist"
+          redirect_to attractions_url
+        }
+        format.json {}
+      end
+    end
+  end
+
   def create
     @attraction = Attraction.new(attraction_params)
     respond_to do |format|
@@ -23,20 +41,34 @@ class AttractionsController < ApplicationController
     end
   end
 
-  def show
+  def edit
     @attraction = Attraction.find_by(id: params[:id])
     respond_to do |format|
       if @attraction
         format.html {
-          render :show
+          render :edit
         }
-        format.json {}
       else
         format.html {
-          flash[:error] = "Ride #{params[:id]} doesn't exist"
+          flash[:error] = "Attraction #{params[:id]} doesn't exist"
           redirect_to attractions_url
         }
-        format.json {}
+      end
+    end
+  end
+
+  def update
+    @attraction = Attraction.find_by(id: params[:id])
+    respond_to do |format|
+      if @attraction.update_attributes(attraction_params)
+        format.html {
+          flash[:success] = "Attraction #{@attraction.name} updated Successfully"
+          redirect_to @attraction
+        }
+      else
+        format.html {
+          render :edit
+        }
       end
     end
   end
