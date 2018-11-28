@@ -16,15 +16,9 @@
                 <li class="list-group-item list-group-item-danger">You must be <%= attraction.min_height %> inches tall to ride this attraction.</li>
               </ul>
             </div>
-            <p><a href="#" class="btn btn-success" role="button">Go on <%= attraction.name %></a> <a href="<%= attraction_path(attraction) %>" class="btn btn-primary" role="button">Details</a></p>            
+            <p><a href="<%= attraction_path(attraction) %>" class="btn btn-success" role="button">Go on <%= attraction.name %></a></p>
           </div>
         </div>
       </div>
     <% end %>
 </div>
-
-<!-- :name => "Teacups",
-:tickets => 1,
-:nausea_rating => 5,
-:happiness_rating => 1,
-:min_height => 28 -->
