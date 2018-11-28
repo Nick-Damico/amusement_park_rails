@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   # Associations
   has_many :rides
   has_many :attractions, through: :rides
+  before_validation :max_happiness_nausea_reached
   # Validations
   validates :name, presence: true, uniqueness: true
   validates :height, presence: true, numericality: { only_integer: false }, unless: :is_admin?
@@ -21,5 +22,13 @@ class User < ActiveRecord::Base
   private
   def is_admin?
     admin
+  end
+
+  def max_happiness_nausea_reached
+    # Bypass if admin, Admins are not required to define attributes [nausea, tickets, happiness]
+    unless self.admin
+      self.happiness = 5 if self.happiness > 5
+      self.nausea = 5 if self.nausea > 5
+    end
   end
 end
