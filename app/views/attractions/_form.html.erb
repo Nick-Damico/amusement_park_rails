@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for attraction, html: {class: 'form-horizontal'} do |f| %>
+        <%= render partial: 'shared/error_messages', locals: {model: attraction} %>
+
+        <div class="form-group">
+          <%= f.label :name %>
+          <%= f.text_field :name, class: 'form-control', placeholder: 'Blazing Fury' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :min_height, 'Height: (in inches)' %>
+          <%= f.text_field :min_height, class: 'form-control', placeholder: '48' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :happiness_rating, 'Rate Happiness (1-5 scale)' %>
+          <%= f.text_field :happiness_rating, class: 'form-control', placeholder: '3' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :nausea_rating, 'Rate Nausea (1-5 scale)' %>
+          <%= f.text_field :nausea_rating, class: 'form-control', placeholder: '3' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :tickets, 'Ticket Cost (per rider):' %>
+          <%= f.text_field :tickets, class: 'form-control', placeholder: '20' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.submit nil, class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+</div>

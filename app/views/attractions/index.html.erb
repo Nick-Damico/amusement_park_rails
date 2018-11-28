@@ -1,3 +1,10 @@
+<% if is_admin? %>
+<div class="row">
+  <div class="col-sm-2">
+    <p><%= button_to "New Attraction", new_attraction_path, method: 'get', class: 'btn btn-primary btn-lg' %></p>
+  </div>
+</div>
+<% end %>
 <div class="row">
     <% @attractions.each do |attraction| %>
       <div class="col-sm-6 col-md-4">
