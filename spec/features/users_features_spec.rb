@@ -51,6 +51,16 @@ describe 'Feature Test: User Signup', :type => :feature do
     expect(page).to have_content("Sign Up")
   end
 
+  it "prevents a user froming seeing 'sign up' button on home page, instead 'view attractions'" do
+    create_standard_user
+    visit '/signin'
+    user_login
+    visit root_url
+
+    expect(page).to_not have_content('Sign Up')
+    expect(page).to have_content('View attractions')
+  end
+
   it 'successfully signs up as admin' do
     visit '/users/new'
     expect(current_path).to eq('/users/new')
