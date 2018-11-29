@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :get_user, only: [:show]
+  before_action :get_user, only: [:show, :edit]
   before_action :logged_in, only: [:show]
 
   def new
@@ -34,6 +34,9 @@ class UsersController < ApplicationController
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def edit
   end
 
   private
