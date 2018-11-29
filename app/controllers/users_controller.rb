@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :get_user, only: [:show, :edit]
+  before_action :get_user, only: [:show, :edit, :update]
   before_action :logged_in, only: [:show]
 
   def new
@@ -37,6 +37,23 @@ class UsersController < ApplicationController
   end
 
   def edit
+  end
+
+  def update
+    if @user && @user.id == current_user[:id]
+      respond_to do |format|
+        if @user.update_attributes(user_params)
+          format.html {
+            flash[:success] = "User information updated successfully"
+            redirect_to @user
+          }
+        else
+          format.html {
+            render :edit
+          }
+        end
+      end
+    end
   end
 
   private
