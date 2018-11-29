@@ -10,6 +10,10 @@ module LoginHelper
     click_button('Create User')
   end
 
+  def user_signout
+    click_link('Log Out')
+  end
+
   def user_login
     fill_in "user_name",:with => 'Mindy'
     fill_in("user_password", :with => "password")
