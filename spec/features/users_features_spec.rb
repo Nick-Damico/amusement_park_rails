@@ -187,6 +187,15 @@ describe 'Feature Test: User Edit', :type => :feature do
     expect(current_path).to eq('/')
     expect(page).to have_content('Access Denied. Must login to View User profiles')
   end
+
+  it 'prevents a logged in User from editing another Users information' do
+    create_standard_user_1
+    create_standard_user_2
+
+    visit '/users/3/edit'
+    expect(current_path).to eq('/')
+    expect(page).to have_content('Access Denied. Must login to View User profiles')
+  end
 end
 
 describe 'Feature Test: Go on a Ride', :type => :feature do

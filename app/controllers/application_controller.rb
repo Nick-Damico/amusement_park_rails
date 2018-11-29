@@ -14,4 +14,8 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def current_user_is_not_requested_user
+    binding.pry
+  end
+
 end

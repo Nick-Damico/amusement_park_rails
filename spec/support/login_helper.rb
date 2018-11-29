@@ -44,6 +44,28 @@ module LoginHelper
       )
   end
 
+  def create_standard_user_1
+    @tommy = User.create(
+      name: "Alex",
+      password: 'alexpassword',
+      happiness: 3,
+      nausea: 4,
+      tickets: 20,
+      height: 48
+    )
+  end
+
+  def create_standard_user_2
+    @tommy = User.create(
+      name: "Noah",
+      password: 'noahpassword',
+      happiness: 2,
+      nausea: 4,
+      tickets: 20,
+      height: 56
+    )
+  end
+
   def create_standard_and_admin_user
     @mindy = User.create(
       name: "Mindy",
