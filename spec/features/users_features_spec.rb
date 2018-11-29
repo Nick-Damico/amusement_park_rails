@@ -193,8 +193,8 @@ describe 'Feature Test: User Edit', :type => :feature do
     create_standard_user_2
 
     visit '/users/3/edit'
-    expect(current_path).to eq('/')
-    expect(page).to have_content('Access Denied. Must login to View User profiles')
+    expect(current_path).to eq('/users/1')
+    expect(page).to have_content('Access Denied. You are not authorized')
   end
 end
 

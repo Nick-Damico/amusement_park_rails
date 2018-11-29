@@ -14,8 +14,11 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def current_user_is_not_requested_user
-    binding.pry
+  def is_current_user_authorized
+    if current_user != @user
+      flash[:error] = "Access Denied. You are not authorized"
+      redirect_to current_user
+    end
   end
 
 end
