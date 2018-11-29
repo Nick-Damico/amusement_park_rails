@@ -10,6 +10,15 @@ module ApplicationHelper
     end
   end
 
+  def full_title(title = '')
+      app_title = 'RailsAmusementPark'
+    if title.empty?
+      app_title
+    else
+      "#{app_title} | #{title}"
+    end
+  end
+
   def is_admin?
     current_user.admin
   end
