@@ -176,7 +176,8 @@ describe 'Feature Test: User Edit', :type => :feature do
 
     expect(current_path).to eq('/users/1')
     expect(page).to have_content(100)
-    expect(page).to have_content('Tickets: 5')
+    expect(page).to have_content('Tickets: 100')
+    expect(page).to have_content('Mood: happy')
   end
 end
 
