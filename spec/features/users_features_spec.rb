@@ -148,6 +148,19 @@ describe 'Feature Test: User Signout', :type => :feature do
   end
 end
 
+describe 'Feature Test: User Edit', :type => :feature do
+  before :each do
+    visit '/signup'
+    user_signup
+  end
+
+  it 'has a link to edit a logged in Users information' do
+    expect(page).to have_content('Profile')
+    click_link('Profile')
+    expect(page).to have_content('Edit Profile')
+  end
+end
+
 describe 'Feature Test: Go on a Ride', :type => :feature do
 
   before :each do
