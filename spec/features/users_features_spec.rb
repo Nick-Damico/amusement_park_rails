@@ -179,6 +179,14 @@ describe 'Feature Test: User Edit', :type => :feature do
     expect(page).to have_content('Tickets: 100')
     expect(page).to have_content('Mood: happy')
   end
+
+  it 'prevents a User thats not logged in to edit/update information' do
+    user_signout
+    visit '/users/1/edit'
+
+    expect(current_path).to eq('/')
+    expect(page).to have_content('Access Denied. Must login to View User profiles')
+  end
 end
 
 describe 'Feature Test: Go on a Ride', :type => :feature do
