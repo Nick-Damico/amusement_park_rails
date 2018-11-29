@@ -166,6 +166,18 @@ describe 'Feature Test: User Edit', :type => :feature do
     expect(page).to have_content("Edit Amy Poehler's Information")
     expect(current_path).to eq('/users/1/edit')
   end
+
+  it 'Updates a users infomation on submission of form' do
+    click_link('Profile')
+    click_link('Edit')
+    fill_in('user[tickets]', with: 100)
+    fill_in('user[happiness]',with: 5)
+    click_button('Update User')
+
+    expect(current_path).to eq('/users/1')
+    expect(page).to have_content(100)
+    expect(page).to have_content('Tickets: 5')
+  end
 end
 
 describe 'Feature Test: Go on a Ride', :type => :feature do
