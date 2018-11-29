@@ -157,7 +157,14 @@ describe 'Feature Test: User Edit', :type => :feature do
   it 'has a link to edit a logged in Users information' do
     expect(page).to have_content('Profile')
     click_link('Profile')
-    expect(page).to have_content('Edit Profile')
+    expect(page).to have_content("Edit")
+  end
+
+  it 'redirects you to the edit Form for the User' do
+    click_link('Profile')
+    click_link('Edit')
+    expect(page).to have_content("Edit Amy Poehler's Information")
+    expect(current_path).to eq('/users/1/edit')
   end
 end
 
