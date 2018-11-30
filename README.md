@@ -8,11 +8,33 @@ I'm building a more feature rich application using the original App domain as in
 Get comfortable with using form helpers, having models interact with each other, and build out a
 user authenticate and authorize system using 'sessions' and 'bcrypt'.
 
-You're going to be building an amusement park. There will be users, attractions, and users can take rides on attractions.
+## Usage
+The App domain is an amusement park. There will be users, attractions, and users can take rides on attractions.
+
+Ride is the join table between the models User and Attraction.
+
+Using bcrypt gem and the supporting has_secure_password macro the app has uses sessions to
+login and signup users. Admin permission can be set during signup and will allow access to
+additional features, like editing an Attractions attributes, and updating User information.
 
 ## Instructions
 `bundle install`
 `rails db:migrate`
+`rails db:seed`
+
+# To launch application
+`rails server`
+Visit the url `localhost:3000`
+
+# To Test Application with RSpec
+to execute all tests use:
+`rspec`
+
+to execute model tests user:
+`rspec spec/models/#{model_name}_spec.rb`
+
+to execute feature tests:
+`rspec spec/features/users_features_spec.rb`
 
 ## Resources
 * [Rails Generators](http://guides.rubyonrails.org/generators.html)
